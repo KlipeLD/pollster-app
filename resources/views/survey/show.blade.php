@@ -5,10 +5,16 @@
     @forelse($survey->questions as $question)
         <div class="row mt-3 rowHr">
             <div class="col">
+                @if($survey->status == '2')
+                (ID-{{ $question->id}}) 
+                @endif
                 {{ $question->position }}. {{ $question->title}}
                 @forelse($question->options as $key => $option)
                     <div class="row mt-3 px-5">
                         <div class="col ">
+                            @if($survey->status == '2')
+                            (ID-{{ $option->id}}) 
+                            @endif
                             @if($question->type == '1')
                             <div class="form-check">
                                 <input class="form-check-input" value="{{ $option->value }}" type="radio" name="flexRadioDefault" id="flexRadioDefault{{ $key}}">
