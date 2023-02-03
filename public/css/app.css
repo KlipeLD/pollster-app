@@ -1,0 +1,18 @@
+.navbarMenuMain
+{
+    background-color: rgb(60, 31, 83);
+    border-bottom: 5px solid black;
+}
+
+.menuLink
+{
+    color: white!important;
+}
+.menuLink:hover 
+{
+    color: red!important;
+}
+.rowHr 
+{
+    border-bottom: 1px solid black;
+}
